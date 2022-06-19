@@ -14,12 +14,15 @@
 9. View control panel
 10. View more
 
+
+
 ##Stack
 1.Runtime Environment: Node.js
 2.Language: Javascript
 3.Web Server: Fastify
 4.ORM: Prisma
 5.DB: Postgres
+
 
 
 ##Requirements
