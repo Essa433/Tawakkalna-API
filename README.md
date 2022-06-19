@@ -12,7 +12,7 @@
 7. View Services
 8. View digitel wallet
 9. View control panel
-10. View more
+10. View more.
 
 
 
@@ -21,7 +21,7 @@
 2.Language: Javascript
 3.Web Server: Fastify
 4.ORM: Prisma
-5.DB: Postgres
+5.DB: Postgres.
 
 
 
@@ -29,7 +29,7 @@
 1.At least 10 endpoints
 2.Authentication (JWT)
 3.Validation
-4.No Supabase
+4.No Supabase.
 
 
 ##Deadline
