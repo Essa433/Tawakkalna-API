@@ -20,8 +20,8 @@
 1.Runtime Environment: Node.js
 2.Language: Javascript
 3.Web Server: Fastify
-4.ORM: Prisma
-5.DB: Postgres.
+4.ORM: mongoose
+5.DB: mongodb.
 
 
 
