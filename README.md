@@ -1,7 +1,6 @@
 # Tawakkalna-API
 
 
-
 ##Features
 1. Login
 2. create account
@@ -15,23 +14,20 @@
 10. View more.
 
 
+##Stack
+1. Runtime Environment: Node.js
+2. Language: Typescript
+3. Web Server: Fastify
+4. ORM: mongoose
+5. DB: mongodb.
+
 
 ##Stack
-
-1.Runtime Environment: Node.js
-2.Language: Javascript
-3.Web Server: Fastify
-4.ORM: mongoose
-5.DB: mongodb.
+1. At least 10 endpoints
+2. Authentication (JWT)
+3. Validation
+4. No Supabase
 
 
-
-##Requirements
-1.At least 10 endpoints
-2.Authentication (JWT)
-3.Validation
-4.No Supabase.
-
-
-##Deadline
+##Stack
 before Monday 20 Jun, 10 AM
