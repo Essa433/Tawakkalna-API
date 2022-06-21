@@ -14,12 +14,14 @@
 10. View more.
 
 
+
 ##Stack
 1. Runtime Environment: Node.js
 2. Language: Typescript
 3. Web Server: Fastify
 4. ORM: mongoose
 5. DB: mongodb.
+
 
 
 ##Stack
@@ -29,5 +31,6 @@
 4. No Supabase
 
 
+
 ##Stack
-before Monday 20 Jun, 10 AM
+- before Monday 20 Jun, 10 AM
