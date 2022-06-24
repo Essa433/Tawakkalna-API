@@ -2,15 +2,15 @@
 
 
 ##Features
-1. Login
-2. create account
-3. Update account
-4. Delete account
-5. View account
-6. View Homepage
-7. View Services
-8. View digitel wallet
-9. View control panel
+1. users
+2. profile
+3. Services
+4. Homepage
+5. Vehicle Documents
+6. Identefication Id
+7. Education decument
+8. Digitel wallet
+9. Control panel
 10. View more.
 
 
