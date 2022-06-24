@@ -17,20 +17,20 @@
 
 ##Stack
 1. Runtime Environment: Node.js
-2. Language: Typescript
-3. Web Server: Fastify
-4. ORM: mongoose
-5. DB: mongodb.
+2. Language: JavaScript or TypeScript
+3. Web Server: Express or Fastify
+4. ORM: Use what you want
+5. DB: Use what you want
 
 
 
 ##Stack
 1. At least 10 endpoints
-2. Authentication (JWT)
-3. Validation
-4. No Supabase
+2. Authentication
+3. You have to create your DB
+4. You could use Insomnia or somthing else for testing your API
 
 
 
 ##Stack
-- before
+- Thresday 30 June
