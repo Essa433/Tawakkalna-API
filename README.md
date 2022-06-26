@@ -5,13 +5,19 @@
 1. users
 2. profile
 3. Services
-4. Homepage
-5. Vehicle Documents
-6. Identefication Id
-7. Education decument
-8. Digitel wallet
-9. Control panel
-10. View more.
+- well add more than one service like Public services , Health services , Education services 
+
+5. Homepage
+- in this page the user can see The most prominent services , Digital Wallet , Services , Data panel , View more
+
+7. Vehicle Documents
+- 
+
+9. Identefication Id
+10. Education decument
+11. Digitel wallet
+12. Control panel
+13. View more.
 
 
 
