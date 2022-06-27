@@ -28,7 +28,7 @@ in digital wallet their will be one Vehicle Documents, one Identefication Id, an
 - i will view the profile of the user and three data like oppoitment, passport, Sejel tejary 
 
 17. View more.
-my account , common questions
+- my account , common questions
 
 
 ##Stack
