@@ -3,22 +3,32 @@
 
 ##Features
 1. users
-2. profile
-3. Services
+3. profile
+- there is will be a profile for each user
+
+5. Services
 - well add more than one service like Public services , Health services , Education services 
 
 5. Homepage
 - in this page the user can see The most prominent services , Digital Wallet , Services , Data panel , View more
 
 7. Vehicle Documents
-- 
+- each user will have a Vehicle Documents in digital wallet
 
 9. Identefication Id
-10. Education decument
-11. Digitel wallet
-12. Control panel
-13. View more.
+- each user will have a Identefication Id in digital wallet
 
+11. Education decument
+- each user will have a Identefication Id in digital wallet
+
+13. Digitel wallet
+in digital wallet their will be one Vehicle Documents, one Identefication Id, and one Education decument for each user
+
+15. Data panel
+- i will view the profile of the user and three data like oppoitment, passport, Sejel tejary 
+
+17. View more.
+my account , common questions
 
 
 ##Stack
