@@ -1,0 +1,155 @@
+// // This is your Prisma schema file. Learn more in the
+// // documentation: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//--------------------------------------------------------------------------------
+
+model User {
+  user_id        String                @id @default(auto()) @map("_id") @db.ObjectId
+  email          String                @unique
+  name           String
+  age            String
+  role           UserRole
+  nationalId     String                @unique
+  password       String
+  date_birth     String
+  phoneNumber    String                @default("05-000-0000")
+  place_birth    PlaceOfBierth
+  nationality    Nationality
+  blood_type     BloodType
+  marital_status Boolean
+  gender         Boolean
+  photo          String
+  datapanel      DatapanelInsideUser[]
+  digitalwallet  DigitalWallet?
+  services       ServiceInsideUser[]
+}
+
+enum UserRole {
+  User
+  Admin
+
+}
+
+enum BloodType {
+  O
+  AB
+  A
+  B
+}
+
+enum PlaceOfBierth {
+  Saudi
+  Oman
+  Egipt
+  Sudan
+  India
+  Qatar
+
+}
+
+enum Nationality {
+  Saudi
+  Oman
+  Egipt
+  Sudan
+  India
+  Qatar
+
+}
+
+//------------------------------------------------------------------
+
+type ServiceInsideUser {
+  // service_id    String      @map("_id") @db.ObjectId
+  service_type  servicetype
+  service_title String
+  aftar         String
+}
+
+model Service {
+  service_id       String      @id @default(auto()) @map("_id") @db.ObjectId
+  service_type     servicetype
+  service_title    String
+  aftar            String
+  featured_service Boolean
+  // user_id          String      @relation(fields: [user_id], references: [id])
+  // user             User
+
+}
+
+enum servicetype {
+
+  Public_service
+  Health_service
+  Education_service
+
+
+}
+
+//------------------------------------------------------------
+
+type DatapanelInsideUser {
+  // DataPanel_id   String   @id @default(auto()) @map("_id") @db.ObjectId
+  Data_title     String
+  DataPanel_type DataPanelType
+  aftar          String
+
+
+}
+
+model Datapanel {
+  DataPanel_id   String        @id @default(auto()) @map("_id") @db.ObjectId
+  Data_title     String
+  DataPanel_type DataPanelType
+  aftar          String
+  // user    User   @relation(fields: [user_id], references: [user_id])
+  // user_id String @unique
+}
+
+enum DataPanelType {
+
+  appointment
+  passport
+  vehicles
+
+
+}
+
+//---------------------------------------
+
+model DigitalWallet {
+  DigitalWallet_id           String       @id @default(auto()) @map("_id") @db.ObjectId
+  identification_Created_at  DateTime     @default(now())
+  identification_Expire_Date DateTime
+  student_id                 String       
+  student_name               String
+  student_email              String       
+  vehicle_Created_at         DateTime     @default(now())
+  vehicle_Expire_Date        DateTime
+  vehicle_color              String
+  vehicle_number             String
+  Document_Type              DocumentType
+
+  user    User   @relation(fields: [user_id], references: [user_id])
+  user_id String @unique
+
+
+}
+
+enum DocumentType {
+  IdentificationID
+  Education_Decumentation
+  vehicle_registration
+  driving_license
+}
+
+//------------------------------------------------------

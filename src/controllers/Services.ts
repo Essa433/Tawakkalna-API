@@ -13,6 +13,7 @@ export function createNewServices(services: any[], newService: any) {
     return services;
 }
 
+
 // export function ShowServicesInHomepage(services: any[], newService: any) {
 
 //     const serviceIndex = services.findIndex((el: { id: any; }) => el.id === newService.id);
