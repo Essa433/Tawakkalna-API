@@ -52,4 +52,4 @@ in digital wallet their will be one Vehicle Documents, one Identefication Id, an
 - Thresday 30 June
 
 ##Heroku Url
- https://twakkalna-api.herokuapp.com/
+ https://twakkalna-api-app.herokuapp.com/
