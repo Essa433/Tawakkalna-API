@@ -43,7 +43,7 @@ const PartialProfileWithoutId = Type.Partial(UserWithoutId);
 type PartialProfileWithoutId = Static<typeof PartialProfileWithoutId>;
 
 const GetProfileQuery = Type.Object({
-    // text: Type.Optional(Type.String()),
+    text: Type.Optional(Type.String()),
 });
 type GetProfileQuery = Static<typeof GetProfileQuery>;
 
@@ -102,13 +102,13 @@ export default async function (server: FastifyInstance) {
                 tags: ['profiles'],
                 querystring: GetProfileQuery,
                 response: {
-                    '2xx': Type.Array(Contact),
+                    '2xx': Type.Array(User),
                 },
             },
             handler: async (request, reply) => {
-                const query = request.query as GetContactsQuery;
+                const query = request.query as GetProfileQuery;
     
-                const contacts = await prismaClient.contact.findMany();
+                const contacts = await prismaClient.user.findMany();
                 if (!query.text) return contacts;
     
                 const fuse = new Fuse(contacts, {
@@ -122,7 +122,7 @@ export default async function (server: FastifyInstance) {
     
                 console.log(JSON.stringify(fuse.search(query.text)));
     
-                const result: Contact[] = fuse.search(query.text).map((r) => r.item);
+                const result: User[] = fuse.search(query.text).map((r) => r.item);
                 return result;
             },
         });

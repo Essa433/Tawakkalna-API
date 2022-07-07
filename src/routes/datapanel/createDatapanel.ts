@@ -243,7 +243,7 @@ export default async function (server: FastifyInstance) {
                 includeMatches: true,
                 findAllMatches: true,
                 threshold: 1,
-                keys: ['name'],
+                keys: ['Data_title'],
             });
 
             console.log(JSON.stringify(fuse.search(query.text)));
