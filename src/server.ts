@@ -2,9 +2,15 @@ import fastifyAutoload from '@fastify/autoload';
 import fastifyJwt from '@fastify/jwt';
 import fastifySensible from '@fastify/sensible';
 import fastifySwagger from '@fastify/swagger';
+import fastifyCors from '@fastify/cors'
 import { ajvTypeBoxPlugin, TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import fastify from 'fastify';
 import { join } from 'path';
+
+
+
+
+
 
 export const server = fastify({
 	logger: true,
@@ -16,6 +22,8 @@ export const server = fastify({
 		plugins: [ajvTypeBoxPlugin],
 	},
 }).withTypeProvider<TypeBoxTypeProvider>();
+
+server.register(fastifyCors);
 
 server.register(fastifyJwt, {
 	secret: 'supersecret'
@@ -45,7 +53,20 @@ server.register(fastifySwagger, {
 		},
 	},
 });
+
 server.register(fastifySensible);
+
+// server.register(cors, {
+// 	origin: *,
+//     methods: ['GET','PUT','PATCH','POST','DELETE'],
+// })
+
+// server.get('/', (req, reply) => {
+// 	reply.send({ hello: 'world' })
+// })
+
+// // await server.listen({ port: 3000 })
+
 server.register(fastifyAutoload, {
 	dir: join(__dirname, 'routes'),
 });

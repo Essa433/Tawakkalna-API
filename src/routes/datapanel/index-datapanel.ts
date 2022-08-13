@@ -12,12 +12,16 @@ export const DatapanelWithId = Type.Object({
     Data_title: Type.String(),
     DataPanel_type: Type.String(),
     aftar: Type.String(),
+    descryption: Type.String(),
+
 })
 
 export const datapanelWithoutId = Type.Object({
     Data_title: Type.String(),
     DataPanel_type: Type.String(),
     aftar: Type.String(),
+    descryption: Type.String(),
+
 })
 
 

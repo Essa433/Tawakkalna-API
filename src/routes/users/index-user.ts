@@ -14,21 +14,21 @@ export const UserWithId = Type.Object({
 	place_birth: Type.String(),
 	nationality: Type.String(),
 	blood_type: Type.String(),
-	marital_status: Type.Boolean(),
-	gender: Type.Boolean(),
+	marital_status: Type.String(),
+	gender: Type.String(),
 	photo: Type.String(),
 
-	services: Type.Object({
+	services: Type.Array(Type.Object({
 		service_title: Type.String(),
 		service_type: Type.String(),
 		aftar: Type.String()
-	}),
+	}), { default: [] }),
 
-	datapanel: Type.Object({
+	datapanel: Type.Array(Type.Object({
 		Data_title: Type.String(),
 		DataPanel_type: Type.String(),
 		aftar: Type.String()
-	})
+	}), { default: [] }),
 });
 export const UserWithoutId = Type.Object({
 	email: Type.String(),
@@ -42,19 +42,19 @@ export const UserWithoutId = Type.Object({
 	nationality: Type.String(),
 	password: Type.String(),
 	blood_type: Type.String(),
-	marital_status: Type.Boolean(),
-	gender: Type.Boolean(),
+	marital_status: Type.String(),
+	gender: Type.String(),
 	photo: Type.String(),
-	services: Type.Object({
+	services: Type.Array(Type.Object({
 		service_title: Type.String(),
 		service_type: Type.String(),
 		aftar: Type.String()
-	}),
-	datapanel: Type.Object({
+	}), { default: [] }),
+	datapanel: Type.Array(Type.Object({
 		Data_title: Type.String(),
 		DataPanel_type: Type.String(),
 		aftar: Type.String()
-	})
+	}), { default: [] }),
 });
 type UserWithoutId = Static<typeof UserWithoutId>;
 export const PartialUserWithoutId = Type.Partial(UserWithoutId);

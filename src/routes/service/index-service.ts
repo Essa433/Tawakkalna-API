@@ -12,6 +12,7 @@ export const ServiceWithID = Type.Object({
     service_type: Type.String(),
     service_title: Type.String(),
     aftar: Type.String(),
+    descryption: Type.String(),
     featured_service: Type.String()
 })
 
@@ -19,7 +20,9 @@ export const ServiceWithoutId = Type.Object({
     service_type: Type.String(),
     service_title: Type.String(),
     aftar: Type.String(),
+    descryption: Type.String(),
     featured_service: Type.Boolean()
+
 })
 
 type ServiceWithoutId = Static<typeof ServiceWithoutId>;

@@ -10,24 +10,12 @@ import { addAuthorization } from '../../hooks/auth';
 import { prismaClient } from '../../prisma';
 export const DigitalWalletwithID = Type.Object({
     DigitalWallet_id: Type.String(),
-    identification_Expire_Date: Type.String({ format: '' }),
-    student_id: Type.String(),
-    student_name: Type.String(),
-    student_email: Type.String(),
-    vehicle_Expire_Date: Type.String({ format: '' }),
-    vehicle_color: Type.String(),
-    vehicle_number: Type.String(),
+    photo: Type.String(),
     Document_Type: Type.String(),
     user_id: Type.String()
 })
 export const DigitalWalletWithoutId = Type.Object({
-    identification_Expire_Date: Type.String({ format: "date-time" }),
-    student_id: Type.String(),
-    student_name: Type.String(),
-    student_email: Type.String(),
-    vehicle_Expire_Date: Type.String({ format: "date-time" }),
-    vehicle_color: Type.String(),
-    vehicle_number: Type.String(),
+    photo: Type.String(),
     Document_Type: Type.String(),
     user_id: Type.String()
 })

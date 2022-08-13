@@ -25,8 +25,8 @@ model User {
   place_birth    PlaceOfBierth
   nationality    Nationality
   blood_type     BloodType
-  marital_status Boolean
-  gender         Boolean
+  marital_status String
+  gender         String
   photo          String
   datapanel      DatapanelInsideUser[]
   digitalwallet  DigitalWallet?
@@ -36,7 +36,6 @@ model User {
 enum UserRole {
   User
   Admin
-
 }
 
 enum BloodType {
@@ -53,7 +52,6 @@ enum PlaceOfBierth {
   Sudan
   India
   Qatar
-
 }
 
 enum Nationality {
@@ -63,7 +61,6 @@ enum Nationality {
   Sudan
   India
   Qatar
-
 }
 
 //------------------------------------------------------------------
@@ -81,18 +78,15 @@ model Service {
   service_title    String
   aftar            String
   featured_service Boolean
+  descryption      String
   // user_id          String      @relation(fields: [user_id], references: [id])
   // user             User
-
 }
 
 enum servicetype {
-
   Public_service
   Health_service
   Education_service
-
-
 }
 
 //------------------------------------------------------------
@@ -102,8 +96,6 @@ type DatapanelInsideUser {
   Data_title     String
   DataPanel_type DataPanelType
   aftar          String
-
-
 }
 
 model Datapanel {
@@ -111,38 +103,26 @@ model Datapanel {
   Data_title     String
   DataPanel_type DataPanelType
   aftar          String
+  descryption    String
   // user    User   @relation(fields: [user_id], references: [user_id])
   // user_id String @unique
 }
 
 enum DataPanelType {
-
   appointment
   passport
   vehicles
-
-
 }
 
 //---------------------------------------
 
 model DigitalWallet {
-  DigitalWallet_id           String       @id @default(auto()) @map("_id") @db.ObjectId
-  identification_Created_at  DateTime     @default(now())
-  identification_Expire_Date DateTime
-  student_id                 String       
-  student_name               String
-  student_email              String       
-  vehicle_Created_at         DateTime     @default(now())
-  vehicle_Expire_Date        DateTime
-  vehicle_color              String
-  vehicle_number             String
-  Document_Type              DocumentType
+  DigitalWallet_id String       @id @default(auto()) @map("_id") @db.ObjectId
+  photo            String
+  Document_Type    DocumentType
 
   user    User   @relation(fields: [user_id], references: [user_id])
   user_id String @unique
-
-
 }
 
 enum DocumentType {
@@ -150,6 +130,7 @@ enum DocumentType {
   Education_Decumentation
   vehicle_registration
   driving_license
+  cridet_card
 }
 
 //------------------------------------------------------
