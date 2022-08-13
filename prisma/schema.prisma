@@ -87,6 +87,7 @@ enum servicetype {
   Public_service
   Health_service
   Education_service
+  faaliat
 }
 
 //------------------------------------------------------------
